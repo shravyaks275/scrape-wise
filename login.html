@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Login Dialog</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #4b6cb7, #182848);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      height: 100vh;
+      max-height: 600px;
+      max-width: 350px;
+      margin: auto;
+    }
+
+    /* Overlay for dialog effect */
+    #overlay {
+      position: fixed;
+      top:0;
+      left:0;
+      width: 100vw;
+      height: 100vh;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      padding: 10px;
+    }
+
+    /* Dialog box styling */
+    #loginDialog {
+      background: #fff;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 350px;
+      padding: 30px 25px 35px 25px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    #loginDialog h2 {
+      margin: 0 0 20px 0;
+      text-align: center;
+      color: #182848;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+
+    /* Input groups */
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      color: #182848;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.8px solid #4b6cb7;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      border-color: #182848;
+      box-shadow: 0 0 8px #4b6cb7aa;
+    }
+
+    /* Login button */
+    button#loginButton {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      background: #4b6cb7;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    button#loginButton:hover {
+      background: #182848;
+    }
+
+    /* Close button */
+    #closeBtn {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: transparent;
+      border: none;
+      font-size: 1.4rem;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      user-select: none;
+    }
+
+    #closeBtn:hover {
+      color: #182848;
+    }
+
+    /* Message */
+    #message {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #d93025; /* Red for error */
+      min-height: 1.2em;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 400px) {
+      body, html {
+        max-width: 100vw;
+        max-height: 100vh;
+        padding: 10px;
+      }
+
+      #loginDialog {
+        padding: 25px 20px 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Overlay with login dialog -->
+  <div id="overlay" role="dialog" aria-modal="true" aria-labelledby="dialogTitle" tabindex="-1">
+    <div id="loginDialog">
+      <button id="closeBtn" aria-label="Close login dialog">&times;</button>
+      <h2 id="dialogTitle">Login to Your Account</h2>
+      <form id="loginForm" novalidate>
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" autocomplete="username" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required />
+        </div>
+        <button type="submit" id="loginButton">Log In</button>
+      </form>
+      <div id="message" role="alert" aria-live="polite"></div>
+    </div>
+  </div>
+
+<script>
+(function(){
+  const overlay = document.getElementById('overlay');
+  const closeBtn = document.getElementById('closeBtn');
+  const loginForm = document.getElementById('loginForm');
+  const messageDiv = document.getElementById('message');
+  const usernameInput = document.getElementById('username');
+
+  // Focus trap for accessibility: trap focus inside dialog
+  function trapFocus(element) {
+    const focusableElems = element.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])');
+    const firstElem = focusableElems[0];
+    const lastElem = focusableElems[focusableElems.length-1];
+
+    element.addEventListener('keydown', function(e) {
+      const isTabPressed = (e.key === 'Tab' || e.keyCode === 9);
+      if (!isTabPressed) return;
+
+      if (e.shiftKey) { // shift + tab
+        if (document.activeElement === firstElem) {
+          e.preventDefault();
+          lastElem.focus();
+        }
+      } else { // tab
+        if (document.activeElement === lastElem) {
+          e.preventDefault();
+          firstElem.focus();
+        }
+      }
+    });
+  }
+
+  // Show dialog and focus first field
+  function openDialog() {
+    overlay.style.display = 'flex';
+    usernameInput.focus();
+  }
+
+  // Close dialog
+  function closeDialog() {
+    overlay.style.display = 'none';
+    messageDiv.textContent = '';
+    loginForm.reset();
+  }
+
+  // Validate and handle login
+ loginForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    messageDiv.style.color = '#d93025'; // Default error color
+    
+    const username = usernameInput.value.trim();
+    const password = document.getElementById('password').value;
+
+    if (!username || !password) {
+        messageDiv.textContent = "⚠️ Please enter both username and password.";
+        return;
+    }
+
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.json();
+        messageDiv.textContent = data.message;
+
+        // ✅ Close the login popup if authentication succeeds
+        if (data.message.includes("Welcome")) {
+            messageDiv.style.color = '#188038'; // Success color
+            setTimeout(() => closeDialog(), 1500);
+        }
+    } catch (error) {
+        messageDiv.textContent = "❌ Login failed. Please try again.";
+    }
+});
+  // Close button handler
+  closeBtn.addEventListener('click', function(){
+    closeDialog();
+  });
+
+  // Open dialog on page load
+  openDialog();
+
+  // Trap focus inside dialog for accessibility
+  trapFocus(document.getElementById('loginDialog'));
+
+  // Press ESC to close dialog
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && overlay.style.display === 'flex') {
+      closeDialog();
+    }
+  });
+})();
+<script src="script.js"></script>
+</script>
+</body>
+</html>
+

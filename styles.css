@@ -1,0 +1,388 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #87CEFA;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+@media (max-width: 600px) {
+nav a {
+display: block;
+margin: 5px 0;
+}
+
+.survey {
+padding: 10px;
+}
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+}
+
+.logo {
+    
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav {
+    background-color: #87CEFA;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+section {
+    padding: 20px;
+}
+
+.featured-content {
+    text-align: center;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.recent-articles {
+    padding: 20px;
+    margin: 10px 0;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers everything */
+    gap: 15px; /* Adds space between logo and text */
+}
+
+.logo {
+    width: 80px; /* ✅ Increase size */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block; /* ✅ Ensures visibility */
+}
+
+.title {
+    font-size: 36px; /* ✅ Increase size */
+    font-weight: bold;
+    text-align: center;
+}
+.cookie-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: block; /* ✅ Ensure it starts visible */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+header {
+    background-color:  #87CEFA;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    position: relative;
+    font-size: 2.5em;
+}
+.logo img {
+    width: 100%;
+    height: auto;
+    background-image: url('images/web logo.png');
+
+    display: block;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+}
+.logo {
+    
+    top: 20px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+nav {
+    background-color: #87CEFA;
+    padding: 1px;
+    text-align: center;
+    font-size: 1.5em
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1px;
+    margin: 0 10px;
+    font-size: 1.5em
+}
+section {
+    padding: 10px;
+}
+form {
+    text-align: center;
+    margin: 50px auto;
+}
+input {
+    padding: 8px;
+    font-size: 25px;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+button {
+    background-color: #4B9CD3;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #4B9CD3;
+}
+canvas {
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+}
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+#sentimentChart, #salesChart {
+    width: 600px;
+    height: 300px;
+    border-radius: 8px;
+    border: 2px solid #2196f3;
+    background-color: #e3f2fd;
+    overflow-x:auto;
+    display: block;
+}
+#log
+{
+    position: absolute; /* Allows precise positioning */
+    top: 50px; /* Adjust distance from the top */
+    left: 50px; /* Moves the button to the right */
+    padding: 10px 15px;
+    background-color: #4B9CD3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#darkModeToggle {
+    position: absolute; /* Allows precise positioning */
+    top: 50px; /* Adjust distance from the top */
+    right: 50px; /* Moves the button to the right */
+    padding: 10px 15px;
+    background-color: #4B9CD3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#darkModeToggle:hover {
+    background-color: #4B9CD3
+}
+footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+        dialog {
+            border: none;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        dialog h2 {
+            margin: 0 0 10px;
+        }
+        
+        dialog label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        
+        dialog input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        
+        dialog button {
+            margin-right: 10px;
+        }
+        .container {
+            text-align: center;
+          }
+          
+          .large-text {
+            font-size: 50px;
+            color: white;
+            font-weight: bold;
+          }
+          
+          .small-text {
+            font-size: 20px;
+            color: white;
+            margin-top: 10px; /* Adjust spacing */
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Adds space between items */
+          }
+          .scrape-wise {
+            position: relative;
+            top: -60px; /* Adjust the value as needed */
+          }
+          .container {
+            display: flex;
+          
+            justify-content: flex-start; /* Moves text higher */
+            align-items: center;
+          }
+          .cookie-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: none;
+        }
+        
+        .cookie-container button {
+            background-color: #4B9CD3;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .cookie-container button:hover {
+            background-color: #007BB5;
+        }
+        .dark-mode {
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+        @keyframes buttonClick {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.95); }
+            100% { transform: scale(1); }
+        }
+        
+        button:active {
+            animation: buttonClick 0.2s ease-in-out;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.7; }
+        }
+        
+        .loading-indicator {
+            animation: pulse 1s infinite;
+        }
+        @keyframes growBar {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+        
+        .chart-bar {
+            animation: growBar 1s ease-in-out;
+        }
+        @keyframes fadePage {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .page {
+            animation: fadePage 0.5s ease-in-out;
+        }
+        .message-container {
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: none;
+        }
+        
+        .message-container button {
+            background-color: #4B9CD3;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+        }

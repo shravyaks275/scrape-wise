@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper </title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library -->
+</head>
+<body>
+
+    <header id="scrape-wise">
+       <div class="logo-container">
+    <img src="assets/web_logo.png" class="logo">
+              
+    <h1 class="title">SCRAPE WISE</h1>
+</div>
+            
+            <button id="darkModeToggle">Dark Mode</button>
+        <button id="log" >Login</button>
+        </div>
+    </header>
+
+
+    <nav >
+        <a href="index.html">Home</a>
+        <a href="admin.html">Admin</a>
+       
+        
+    </nav>
+
+
+    
+        <!-- Login Dialog -->
+<dialog id="loginDialog">
+    <form method="dialog">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+        <button id="cancelButton">Cancel</button>
+        <p id="loginMessage" style="color: red;"></p>
+    </form>
+</dialog>
+
+    <!-- Main Content -->
+    <div id="content">
+        <h1>Welcome to the Web Scraping </h1>
+    </div>
+
+    <!-- Scraping Form -->
+    <form id="scrapeForm">
+        <label for="urls"><h3>Enter URLs (comma-separated):</h3></label>
+        <input type="text" id="urls" name="urls" placeholder="https://example.com, https://example2.com" required>
+        <button type="submit">Scrape Data</button>
+    </form>
+
+
+    <!-- Display Collected Data -->
+    <h2>Collected Data</h2>
+    <pre id="jsonData"></pre>
+
+    <!-- Sentiment Analysis Graph -->
+    <h2>Sentiment Analysis</h2>
+    <canvas id="sentimentChart" width="600" height="300"></canvas>
+     <!-- Sales Data Graph -->
+    <h2>Sales Data - Last Month</h2>
+    <canvas id="salesChart" width="600" height="300"></canvas>
+
+
+    <!-- Other Details -->
+    <div id="otherDetails"></div>
+
+
+    <!-- Product Comparison Section -->
+
+    
+    <h2>Product Comparison</h2>
+    <form id="comparisonForm">
+        <label for="url1">Enter Product URL 1:</label>
+        <input type="text" id="url1" name="url1" required>
+        <label for="url2">Enter Product URL 2:</label>
+        <input type="text" id="url2" name="url2" required>
+        <button type="submit">Compare Products</button>
+    </form>
+    <div id="comparisonResult"></div> <!-- Removed redundant duplicate div -->
+
+   
+    <!-- Export Options -->
+    <h2>Export Options</h2>
+    <button id="exportCsv">Export as CSV</button>
+    <button id="exportJson">Export as JSON</button>
+    <body>
+<div id="messageBox" class="message-container">
+    <p>Welcome to SCRAPE WISE! This website enhances user experience with cookies.</p>
+    <button id="closeMessage">OK</button>
+</div>
+
+    <script src="script.js"></script> <!-- Include your JavaScript file -->
+    <script src="analysis.js"></script>
+    	<p>&nbsp;  Reach us at<a href="scrapewise@gmail.com">@ScrapeWise</a></p>
+</body>
+</html>

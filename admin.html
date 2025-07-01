@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper </title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library -->
+</head>
+<body>
+
+    <header id="scrape-wise">
+        
+		
+		
+            <div class="logo">
+                <img src="C:\Users\user\Downloads\logo for mental health website.png">
+            </div>
+            
+            <h1>SCRAPE WISE</h1>
+            <button id="darkModeToggle">Dark Mode</button>
+        <button id="log" >Login</button>
+        </div>
+    </header>
+
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="admin.html">Admin</a>
+      
+        
+    </nav>
+
+    <main>
+        <section>
+            <h2>User Management</h2>
+            <button id="viewUsers">View Users</button>
+            <button id="blockUser">Block User</button>
+            <div id="userList"></div>
+        </section>
+
+        <section>
+            <h2>Scraping Logs</h2>
+            <button id="downloadLogs">Download Scraping Logs</button>
+            
+            <div id="logs"></div>
+        </section>
+
+        <section>
+            <h2>Data Export</h2>
+            <button id="exportJson">Export JSON</button>
+            <button id="exportCsv">Export CSV</button>
+        </section>
+
+        <section>
+            <h2>Analytics (Power BI)</h2>
+            <div id="powerBIContainer" style="width: 800px; height: 600px;"></div>
+        </section>
+
+        <section>
+            <h2>Security & Server Status</h2>
+            <button id="checkServer">Check Server Health</button>
+            <div id="serverStatus"></div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/powerbi-client/2.20.0/powerbi.min.js"></script>
+    <script src="admin.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>

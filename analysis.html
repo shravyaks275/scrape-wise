@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper Dashboard - Analysis</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library -->
+</head>
+<body>
+    <header>
+        <h1>Web Scraper</h1>
+        <button id="darkModeToggle">Dark Mode</button>
+    </header>
+    
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="analysis.html">Analyze</a>
+        <a href="compare.html">Compare</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+<form id="scrapeForm">
+    <label>Enter URLs (comma-separated):</label>
+            <input type="text" id="urls" placeholder="https://example.com, https://example2.com">
+    <button type="submit">Analyze</button>
+</form>
+<h2>Sentiment Analysis</h2>
+<canvas id="sentimentChart" width="600" height="300"></canvas>
+<h2>Sales Data</h2>
+<canvas id="salesChart" width="600" height="300"></canvas>
+<pre id="jsonData"></pre>
+    
+
+    
+
+   
+    <script src="script.js"></script> <!-- Include your JavaScript file -->
+    <!-- analysis.html -->
+<script src="analysis.js"></script>
+</body>
+</html>

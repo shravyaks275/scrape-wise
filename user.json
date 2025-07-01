@@ -1,0 +1,28 @@
+const fs = require('fs');
+
+const imagePath = 'images/web_logo.png';
+const imageBase64 = fs.readFileSync(imagePath, 'base64');
+
+console.log(imageBase64); // This prints the Base64 string
+
+
+
+
+
+
+
+
+
+
+
+
+const productTitle = await page.$eval('.product-title', el => el.innerText);
+const reviewText = await page.$eval('.review-content', el => el.innerText);
+
+
+
+
+const sentiment = require('sentiment');
+const analysis = sentiment.analyze("This product is amazing!");
+console.log(analysis.score); // Outputs sentiment score
+
