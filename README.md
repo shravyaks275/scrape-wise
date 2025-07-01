@@ -22,12 +22,11 @@ SCRAPE WISE is a Node.js-based tool that automates real-time product data extrac
 | Scheduling    | node-cron                                  |
 | Visualization | Chart.js                                   |
 | Data Format   | JSON                                       |
-___
 
 ## Project Structure
 
 ![image](https://github.com/user-attachments/assets/ccc838a7-c05a-40eb-b819-6f9fccc250d9)
-___
+
 
 ## Installation
 
@@ -52,7 +51,6 @@ ___
    http://localhost:3000
    ```
 
- ___
 ## How It Works
 
 - Users input a product name via the frontend.
@@ -61,7 +59,7 @@ ___
 - Chart.js visualizes price trends and sentiment scores.
 - node-cron schedules scraping tasks for fresh data.
 - Round-robin proxy rotation ensures scraping remains undetected.
-___
+
 ## Output
 ### Home Page
 ![home_page](https://github.com/user-attachments/assets/68fafaf3-8db2-4a91-aacd-ce41797660c5)
@@ -71,7 +69,6 @@ ___
 ![Admin_page](https://github.com/user-attachments/assets/466b85e7-3a3e-48e3-8522-da3690c2c055)
 ### Login Page
 ![login_page](https://github.com/user-attachments/assets/eb0b3c57-1ea8-4850-8bc3-7e11fabfba63)
-___
 
 ## Future Enhancements
 
@@ -79,12 +76,10 @@ ___
 -  AI-powered sentiment analysis using BERT or LSTM
 -  User authentication and personalized dashboards
 -  API integration with real-time e-commerce feeds
-___
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-___
 
 ## Acknowledgments
 
