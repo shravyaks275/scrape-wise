@@ -80,7 +80,7 @@ ___
 - Round-robin proxy rotation ensures scraping remains undetected.
 ___
 ## Output
- Home Page
+### Home Page
 ![home_page](https://github.com/user-attachments/assets/68fafaf3-8db2-4a91-aacd-ce41797660c5)
 ### Home Page in Dark mode
 ![home_page_dark](https://github.com/user-attachments/assets/b86e17e5-3dcb-41fe-8b8b-2b04e11dcf57)
