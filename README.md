@@ -1,7 +1,7 @@
 # SCRAPE WISE
 
 SCRAPE WISE is a Node.js-based tool that automates real-time product data extraction from e-commerce platforms. It performs sentiment analysis on customer reviews using Sentiment.js and visualizes insights like price trends and review polarity using Chart.js. Designed for smarter shopping and competitive market analysis, SCRAPE WISE combines modern web scraping with intuitive data presentation.
-___
+
 ## Features
 
 - 🔍 Real-time web scraping with Puppeteer (Stealth mode enabled)
@@ -11,7 +11,7 @@ ___
 - 🔁 Round-robin proxy rotation for anti-bot evasion
 - 🌐 Express.js backend with RESTful API endpoints
 - 📁 JSON-based storage for scraped and analyzed data
-___
+
 ## Tech Stack
 
 | Layer         | Tools & Libraries                          |
