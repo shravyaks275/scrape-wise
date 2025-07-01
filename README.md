@@ -26,24 +26,7 @@ ___
 
 ## Project Structure
 
-scrape-wise/
-├── server.js               # Express server setup
-├── scraper.js              # Puppeteer scraping logic
-├── sentiment.js            # Sentiment analysis module
-├── /public                 # Frontend files
-│   ├── index.html
-│   ├── analysis.html
-│   ├── compare.html
-│   ├── styles.css
-│   ├── script.js
-│   ├── analysis.js
-│   └── comparision.js
-├── data.json               # Scraped product data
-├── scrapedData.json        # Review and sentiment data
-├── user.json               # Mock user data
-├── package.json
-├── .gitignore
-└── README.md
+![image](https://github.com/user-attachments/assets/ccc838a7-c05a-40eb-b819-6f9fccc250d9)
 ___
 
 ## Installation
