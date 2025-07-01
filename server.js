@@ -326,20 +326,6 @@ app.post('/scrape', async (req, res) => {
     // After scraping:
     saveLogsToFile(); 
 });
-
-//==================powerBI========================//
-
-async function refreshDataset(datasetId) {
-    const accessToken = await getAccessToken();
-    
-    await axios.post(
-        `https://api.powerbi.com/v1.0/myorg/datasets/${datasetId}/refreshes`,
-        {},
-        { headers: { Authorization: `Bearer ${accessToken}` } }
-    );
-
-    console.log("Dataset refresh triggered!");
-}
 //=========================automate=================================//
 cron.schedule('0 8 * * *', async () => {  /*The cron syntax specifies when to run the task:
 
